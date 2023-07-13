@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="chat-user-image">
+    <img src="../../assets/images/user.avif">
+  </div>
+  <div class="chat-container">
+    <div class="chat-messages">
+      <div class="message" *ngFor="let message of messages">
+        <div class="sender">{{ message.sender }}</div>
+        <div class="text">{{ message.text }}</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" [(ngModel)]="newMessage" placeholder="Digite uma mensagem">
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>
+</div>
