@@ -1,0 +1,32 @@
+
+<div class="container col-md-6">
+    
+    <h1 style="color: blue; margin-bottom: 20px; text-align: center;">OnlyChat</h1>
+   
+    <form (ngSubmit)="userRegister()">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="user.email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Usuário</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.usuario">
+          </div>
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="user.gender">
+            <option>Selecione o Gênero</option>
+            <option>Masculino</option>
+            <option>Feminino</option>   
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite a senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" [(ngModel)]="user.password">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite novamente a Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" [(ngModel)]="user.confirmpassword">
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    
+</div>
+
