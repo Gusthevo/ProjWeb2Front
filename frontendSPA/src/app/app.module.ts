@@ -13,7 +13,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
   declarations: [
     AppComponent,
     UserLoginComponent,
-    ChatComponent
+    ChatComponent,
     RegisterUserComponent,
   ],
   imports: [

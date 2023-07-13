@@ -1,0 +1,15 @@
+.signin-link {
+    font-size: 14px;
+    color: #3366ff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .signin-link:hover {
+    text-decoration: none;
+    color: #ff6633;
+  }
+
+  .input-sm {
+    width: 400px; /* Define o tamanho desejado */
+}
