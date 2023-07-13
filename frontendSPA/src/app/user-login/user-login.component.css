@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 50px;
+  }
+  
+  input.form-control {
+    height: 50px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+  }
+  
+  .signup-link {
+    font-size: 14px;
+    color: #3366ff;
+    text-decoration: none;
+  }
+  
+  .signup-link:hover {
+    text-decoration: none;
+    color: #ff6633;
+  }
+  

@@ -1,0 +1,22 @@
+<div class="container col-md-6 d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center">
+    <h1 style="color: blue; margin-bottom: 20px;">OnlyChat</h1>
+    <form (ngSubmit)="userLogin()" class="text-start">
+      <div class="mb-3">
+        <label for="usuario" class="form-label">Usuário</label>
+        <input type="text" [(ngModel)]="user.usuario" class="form-control" id="usuario" name="usuario" style="width: 400px; height: 45px; font-size: 16px; background-color: #f0f0f0;">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Senha</label>
+        <input type="password" [(ngModel)]="user.password" class="form-control" id="password" name="password" style="width: 400px; height: 45px; font-size: 16px; background-color: #f0f0f0;">
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+      <br />
+      <div class="text-center">
+        <a href="#" class="signup-link">Não tenho uma conta ainda, quero me cadastrar</a>
+      </div>
+    </form>
+  </div>
+</div>
