@@ -4,5 +4,5 @@ export class User {
     email!: string;
     confirm_password!: string;
     gender!: string;
-    photo!: File;
+    imageURL!: string;
 }

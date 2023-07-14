@@ -1,0 +1,24 @@
+<div class="primary-color card">
+  <span>Usuários Cadastrados</span>
+  <div>
+    <input class="mat-input" placeholder="Pesquisar" [(ngModel)]="searchTerm">
+  </div>
+</div>
+
+<div class="users-container">
+  <div class="user-card" *ngFor="let user of users">
+    <div>
+      <img class="mat-card-avatar" [src]="user.imageURL" alt="Foto do usuário">
+      <div>{{ user.usuario }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="accent-color">
+  <div>
+    <span>Usuário Logado</span>
+  </div>
+</div>
+<div>
+  <button routerLink="/chat" class="mat-button primary-color" (click)="redirectToChat()">Ir para o Chat</button> <!-- Botão de redirecionamento -->
+</div>

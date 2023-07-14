@@ -24,7 +24,7 @@ export class UserLoginComponent implements OnInit {
         this.router.navigateByUrl('/home'); // Redireciona para a página de home
       },
       error => {
-        alert("Login falhou, insira corretamente o Usuário e senha");
+        alert("Usuário ou Senha incorretos, tente novamente!");
       }
     );
   }

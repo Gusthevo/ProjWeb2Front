@@ -7,12 +7,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegisterService {
-  baseUrl = "http://localhost:8081/user/register";
-  constructor(private httpClient: HttpClient) { }
+  baseUrl = 'http://localhost:8081/user';
 
-registerUser(user: User): Observable<Object> {
-console.log(user);
- return this.httpClient.post(`${this.baseUrl}`, user);
-}
+  constructor(private httpClient: HttpClient) {}
 
+  registerUser(user: User): Observable<Object> {
+    console.log(user);
+    return this.httpClient.post(`${this.baseUrl}/register`, user);
+  }
+
+  checkEmailExists(email: string): Observable<boolean> {
+    const url = `${this.baseUrl}/check-email-exists`;
+    return this.httpClient.post<boolean>(url, { email });
+  }
 }

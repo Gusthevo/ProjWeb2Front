@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ChatComponent } from './chat/chat.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     UserLoginComponent,
     ChatComponent,
     RegisterUserComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

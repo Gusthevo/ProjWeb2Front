@@ -8,21 +8,38 @@ import { RegisterService } from '../register.service';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
+  user: User = new User();
+  confirm_password: string = '';
 
-user:User = new User();
+  constructor(private registerService: RegisterService) {}
 
-constructor(private registerService: RegisterService) {}
+  ngOnInit(): void {}
 
-ngOnInit(): void {
+  userRegister() {
+    if (this.user.password !== this.user.confirm_password) {
+      alert('As senhas digitadas não coincidem!');
+      return;
+    }
+
+    this.registerService.checkEmailExists(this.user.email).subscribe(
+      emailExists => {
+        if (emailExists) {
+          alert('O e-mail fornecido já está em uso. Por favor, escolha outro e-mail.');
+        } else {
+          console.log(this.user);
+          this.registerService.registerUser(this.user).subscribe(
+            data => {
+              alert('Usuário registrado com sucesso!');
+            },
+            error => {
+              alert('Falha ao registrar o usuário.');
+            }
+          );
+        }
+      },
+      error => {
+        alert('Falha ao verificar o e-mail. Tente novamente mais tarde.');
+      }
+    );
+  }
 }
-
-userRegister(){
-  console.log(this.user);
-  this.registerService.registerUser(this.user).subscribe(data=>{
-    alert("Usuário registrado com sucesso!") 
-  }, error=>alert("Usuário ainda não registrado"));
-}
-
-}
-
-

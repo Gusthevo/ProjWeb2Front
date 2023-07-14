@@ -13,3 +13,25 @@
   .input-sm {
     width: 400px; /* Define o tamanho desejado */
 }
+
+.image-preview {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.image-preview {
+  margin-left: 200px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
