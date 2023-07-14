@@ -2,6 +2,7 @@ export class User {
     usuario!: string;
     password!: string;
     email!: string;
-    confirmpassword!: string;
+    confirm_password!: string;
     gender!: string;
+    imageURL!: string;
 }

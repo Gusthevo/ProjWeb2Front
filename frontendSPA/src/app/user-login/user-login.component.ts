@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { LoginuserService } from '../loginuser.service';
-import { RegisterUserComponent } from '../register-user/register-user.component';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -13,7 +12,7 @@ export class UserLoginComponent implements OnInit {
 
   user: User = new User();
 
-  constructor(private loginuserService: LoginuserService) {}
+  constructor(private loginuserService: LoginuserService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -22,9 +21,10 @@ export class UserLoginComponent implements OnInit {
     this.loginuserService.loginUser(this.user).subscribe(
       data => {
         alert("Login realizado com sucesso!");
+        this.router.navigateByUrl('/home'); // Redireciona para a página de home
       },
       error => {
-        alert("Login falhou, insira corretamente o Usuário e senha");
+        alert("Usuário ou Senha incorretos, tente novamente!");
       }
     );
   }
